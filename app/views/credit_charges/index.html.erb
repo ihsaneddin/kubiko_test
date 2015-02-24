@@ -1,0 +1,11 @@
+<h1>Failed Charges</h1>
+
+  <%=table @credit_charges.status('failed'), {type: 'failed'}%>
+
+<h1>Disputed Charges</h1>
+  
+  <%=table @credit_charges.status('disputed'), {type: 'disputed'}%>
+
+<h1>Succesful Charge</h1>
+
+  <%=table @credit_charges.status('successful'), refunded: false%>  
